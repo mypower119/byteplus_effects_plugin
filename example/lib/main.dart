@@ -31,7 +31,7 @@ class _MyAppState extends State<MyApp> {
     // We also handle the message potentially returning null.
     try {
       platformVersion =
-          await ByteplusEffectsPlugin.platformVersion ?? 'Unknown platform version';
+          await ByteplusEffectsPlugin.instance.platformVersion ?? 'Unknown platform version';
     } on PlatformException {
       platformVersion = 'Failed to get platform version.';
     }
@@ -55,6 +55,13 @@ class _MyAppState extends State<MyApp> {
         ),
         body: Center(
           child: Text('Running on: $_platformVersion\n'),
+        ),
+        floatingActionButton: IconButton(
+          icon: Icon(Icons.add),
+          onPressed: () async {
+            var res = await ByteplusEffectsPlugin.instance.pickImage();
+            int a = 0;
+          },
         ),
       ),
     );
