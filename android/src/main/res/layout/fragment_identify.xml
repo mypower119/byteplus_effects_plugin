@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clickable="true">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_board_title"
+        android:background="@drawable/bg_board_head">
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tl_identify"
+            android:background="@color/transparent"
+            app:tabSelectedTextColor="@color/colorWhite"
+            app:tabIndicatorColor="@color/colorWhite"
+            app:tabTextColor="@color/colorGrey"
+            app:tabTextAppearance="@style/TabLayoutTextSize"
+            app:tabIndicatorFullWidth="false"
+            app:tabMode="scrollable"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal"/>
+
+
+        <TextView
+            android:id="@+id/tv_title_identify"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/text_board_title_size"
+            android:gravity="center"
+            android:alpha="0"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+        <com.example.byteplus_effects_plugin.effect.view.ColorListView
+            android:id="@+id/color_list"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"/>
+
+        <ImageView
+            android:id="@+id/iv_close_makeup_option"
+            android:src="@drawable/ic_arrow_left"
+            android:visibility="gone"
+            android:alpha="0"
+            android:padding="5dp"
+            android:layout_gravity="center_vertical|start"
+            android:layout_width="30dp"
+            android:layout_height="30dp" />
+    </FrameLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_divider_line"
+        android:background="@color/color_fill_3"
+        android:foreground="@color/divider_line" />
+
+    <FrameLayout
+        android:id="@+id/fl_identify"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/color_fill_3">
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/vp_identify"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    </FrameLayout>
+</LinearLayout>

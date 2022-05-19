@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:layout_gravity="center"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <ImageView
+        android:id="@+id/iv_face_options"
+        android:layout_width="@dimen/logo_size"
+        android:layout_height="@dimen/logo_size"
+        app:tint="@color/colorGrey" />
+
+    <com.example.byteplus_effects_plugin.common.view.MarqueeTextView
+        android:id="@+id/tv_title_face_options"
+        android:textColor="@color/colorGrey"
+        android:gravity="center"
+        android:textSize="@dimen/text_title_size"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp" />
+
+    <com.example.byteplus_effects_plugin.common.view.MarqueeTextView
+        android:id="@+id/tv_desc_face_options"
+        android:textSize="11dp"
+        android:textColor="@color/colorGrey"
+        android:layout_marginTop="5dp"
+        android:gravity="center"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <View
+        android:id="@+id/v_face_options"
+        android:layout_marginTop="2dp"
+        android:layout_width="4dp"
+        android:layout_height="4dp"
+
+        />
+</LinearLayout>

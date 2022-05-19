@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    android:layout_width="100dp"
+    android:layout_height="@dimen/car_orientation_info_height"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView
+        android:id="@+id/tv_orientation"
+        android:textColor="@color/colorWhite"
+        android:background="@color/color_fill_3"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingStart="5dp"
+        android:paddingEnd="5dp"
+        />
+
+</FrameLayout>

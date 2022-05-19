@@ -1,0 +1,40 @@
+%YAML 1.1
+--- !Material &1
+name: bloom
+guid: {a: 1101376153631212163, b: 6623869153852516777}
+xshader: {localId: 1, path: xshader/bloom.xshader}
+properties:
+  __class: PropertySheet
+  name: ""
+  guid: {a: 11622409894958083650, b: 5648978583601439633}
+  floatmap:
+    __class: Map
+    enableGammaCorrect: 0
+    exposure: 0.5
+    radius: 7
+    threshold: 0.6000000238418579
+  vec4map:
+    __class: Map
+  vec3map:
+    __class: Map
+    color: {x: 0.5, y: 0.5, z: 0.5}
+  vec2map:
+    __class: Map
+  mat4map:
+    __class: Map
+  texmap:
+    __class: Map
+    u_CameraRT: {localId: 1, path: share://input.texture}
+    u_bokehRT: {localId: 1, path: rt/bokeh.rt}
+    u_mask: {localId: 1, path: texture/matting.texture}
+    u_postFilterRT: {localId: 1, path: rt/postFilter.rt}
+    u_preFilterRT: {localId: 1, path: rt/preFilter.rt}
+  intmap:
+    __class: Map
+renderQueue: -1
+enabledMacros:
+  __class: Map
+  AE_DirLightNum: !<str> 0
+  AE_PointLightNum: !<str> 0
+  AE_SpotLightNum: !<str> 0
+mshaderPath: ""

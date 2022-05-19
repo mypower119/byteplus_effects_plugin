@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_gravity="bottom"
+    android:layout_height="@dimen/slider_fragment_height">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_board_title"
+        android:textSize="@dimen/text_board_title_size"
+        android:gravity="center"
+        android:textColor="@color/colorWhite"
+        android:text="@string/tab_background_blur"
+        android:background="@drawable/bg_board_head"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_divider_line"
+        android:background="@color/color_fill_3"
+        android:foreground="@color/divider_line" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:background="@color/color_fill_3">
+
+        <com.example.byteplus_effects_plugin.common.view.ButtonView
+            android:id="@+id/bv_none_matting"
+            app:title="@string/close"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            app:on="false"
+            android:visibility="gone"
+
+            android:layout_height="wrap_content" />
+
+        <com.example.byteplus_effects_plugin.common.view.ButtonView
+            android:id="@+id/bv_upload_matting"
+            app:src="@drawable/ic_background_blur_highlight"
+            app:title="@string/tab_background_blur"
+            app:on="true"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+    <include
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_board_bottom"
+        layout="@layout/view_board_bottom"/>
+</LinearLayout>

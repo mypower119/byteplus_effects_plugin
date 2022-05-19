@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/colorWhite"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="36dp"
+        android:visibility="gone">
+
+        <include
+            layout="@layout/layout_search"/>
+
+        <ImageView
+            android:id="@+id/iv_qr_scan"
+            android:src="@drawable/ic_scan"
+            android:layout_marginStart="20dp"
+            android:padding="5dp"
+            android:layout_width="30dp"
+            android:layout_height="30dp"/>
+    </LinearLayout>
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:id="@+id/cl_main"
+        android:background="@color/colorBg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="216dp">
+
+            <com.google.android.material.appbar.CollapsingToolbarLayout
+                app:titleEnabled="false"
+                app:layout_scrollFlags="scroll|exitUntilCollapsed|snap"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/colorWhite">
+
+                <ImageView
+                    android:text="banner layout"
+                    android:id="@+id/img_banner"
+                    android:layout_width="match_parent"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_height="160dp"/>
+
+                <android.widget.Toolbar
+                    app:contentInsetStart="0dp"
+                    app:layout_collapseMode="pin"
+                    android:layout_gravity="bottom"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <com.google.android.material.tabs.TabLayout
+                            android:id="@+id/tl_main"
+                            app:tabMode="scrollable"
+                            app:tabIndicatorFullWidth="false"
+                            app:tabIndicatorColor="@color/color_brand_6"
+                            app:tabTextColor="@color/color_text_2"
+                            app:tabSelectedTextColor="@color/color_text_4"
+                            app:tabTextAppearance="@style/CustomTextAppearance"
+                            android:background="@color/colorWhite"
+                            android:layout_width="match_parent"
+                            android:layout_height="60dp"/>
+                    </LinearLayout>
+
+                </android.widget.Toolbar>
+
+            </com.google.android.material.appbar.CollapsingToolbarLayout>>
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_main"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+        <FrameLayout
+            android:id="@+id/fl_mask"
+            android:visibility="gone"
+            android:background="@color/transparent_black"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/load_textview"
+                android:layout_gravity="center"
+                android:text="@string/wait_tip"
+                android:textColor="@color/colorWhite"
+                android:textSize="18sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </FrameLayout>
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</LinearLayout>

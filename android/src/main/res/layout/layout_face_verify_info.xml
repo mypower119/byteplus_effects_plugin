@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <LinearLayout
+        android:id="@+id/ll_face_verify"
+        android:layout_width="wrap_content"
+        android:minWidth="150dp"
+        android:layout_height="wrap_content"
+        android:background="@color/color_fill_3"
+        android:layout_marginTop="80dp"
+        android:layout_gravity="right"
+        android:orientation="vertical"
+        android:visibility="invisible">
+
+        <com.example.byteplus_effects_plugin.common.view.PropertyTextView
+            android:id="@+id/ptv_similarity_face_verify"
+            app:propertyTitle="@string/similarity"
+            android:padding="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+        <com.example.byteplus_effects_plugin.common.view.PropertyTextView
+            android:id="@+id/ptv_cost_face_verify"
+            app:propertyTitle="@string/cost"
+            android:padding="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/tv_result_face_verify"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:textColor="@color/colorWhite" />
+    </LinearLayout>
+
+
+
+    <ImageView
+        android:id="@+id/iv_face_verify_show"
+        android:layout_width="80dp"
+        android:layout_height="120dp"
+        android:layout_gravity="end|bottom"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="266dp"/>
+</FrameLayout>

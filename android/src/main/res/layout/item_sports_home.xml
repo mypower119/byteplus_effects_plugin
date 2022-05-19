@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.example.byteplus_effects_plugin.sports.widgets.AspectRatioLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:aspect.ratio.length="width"
+    app:aspect.ratio="1.7"
+    app:aspect.ratio.corner.radius="4dp"
+    android:layout_margin="4dp"
+    android:layout_height="120dp">
+
+    <ImageView
+        android:id="@+id/iv_item_sports_home"
+        android:src="@drawable/img_placeholder"
+        android:scaleType="centerCrop"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        android:id="@+id/tv_item_sports_home"
+        android:gravity="center"
+        android:layout_gravity="bottom"
+        android:textSize="16sp"
+        android:textColor="#FFFFFF"
+        android:background="@drawable/bg_item_sports_home"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_width="match_parent"
+        android:lineSpacingExtra="2sp"
+        android:shadowColor="#80000000"
+        android:shadowRadius="2"
+        android:layout_height="32dp"/>
+</com.example.byteplus_effects_plugin.sports.widgets.AspectRatioLayout>

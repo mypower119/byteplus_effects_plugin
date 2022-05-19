@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F7F8FA"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ImageView
+        android:id="@+id/iv_back_sports_result"
+        android:src="@drawable/ic_arrow_left_sport"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:padding="12dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="10dp"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        tools:ignore="ContentDescription" />
+
+    <FrameLayout
+        app:layout_constraintTop_toBottomOf="@id/iv_back_sports_result"
+        app:layout_constraintBottom_toTopOf="@id/iv_exit_sports_result"
+        android:layout_width="match_parent"
+        android:layout_height="0dp">
+
+        <com.example.byteplus_effects_plugin.sports.widgets.AspectRatioLayout
+            android:id="@+id/v_info_sports_result"
+            app:aspect.ratio="0.75"
+            app:aspect.ratio.length="width"
+            app:aspect.ratio.corner.radius="8dp"
+            android:layout_gravity="center"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="0dp">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/iv_placeholder_sports_result"
+                    android:src="@drawable/img_placeholder"
+                    android:scaleType="centerCrop"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="3"
+                    tools:ignore="ContentDescription" />
+
+                <include
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_gravity="bottom"
+                    layout="@layout/layout_sport_result_info"/>
+            </LinearLayout>
+        </com.example.byteplus_effects_plugin.sports.widgets.AspectRatioLayout>
+    </FrameLayout>
+
+    <ImageView
+        android:id="@+id/iv_exit_sports_result"
+        android:src="@drawable/ic_result_exit"
+        app:layout_constraintBottom_toTopOf="@id/tv_exit_sports_result"
+        app:layout_constraintStart_toStartOf="@id/tv_exit_sports_result"
+        app:layout_constraintEnd_toEndOf="@id/tv_exit_sports_result"
+        android:layout_marginBottom="6dp"
+        android:layout_width="52dp"
+        android:layout_height="52dp"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        android:id="@+id/tv_exit_sports_result"
+        android:text="@string/exit"
+        android:textSize="12sp"
+        android:textColor="#86909C"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/tv_save_sports_result"
+        android:layout_marginBottom="56dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <ImageView
+        android:id="@+id/iv_save_sports_result"
+        android:src="@drawable/ic_save"
+        app:layout_constraintBottom_toTopOf="@id/tv_save_sports_result"
+        app:layout_constraintStart_toStartOf="@id/tv_save_sports_result"
+        app:layout_constraintEnd_toEndOf="@id/tv_save_sports_result"
+        android:layout_marginBottom="6dp"
+        android:layout_width="52dp"
+        android:layout_height="52dp"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        android:id="@+id/tv_save_sports_result"
+        android:text="@string/save"
+        android:textSize="12sp"
+        android:textColor="#86909C"
+        app:layout_constraintBottom_toBottomOf="@id/tv_exit_sports_result"
+        app:layout_constraintStart_toEndOf="@id/tv_exit_sports_result"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+<!--    <ImageView-->
+<!--        android:id="@+id/iv_share_sports_result"-->
+<!--        android:src="@drawable/ic_share"-->
+<!--        app:layout_constraintBottom_toTopOf="@id/tv_share_sports_result"-->
+<!--        app:layout_constraintStart_toStartOf="@id/tv_share_sports_result"-->
+<!--        app:layout_constraintEnd_toEndOf="@id/tv_share_sports_result"-->
+<!--        android:layout_marginBottom="6dp"-->
+<!--        android:layout_width="52dp"-->
+<!--        android:layout_height="52dp"-->
+<!--        tools:ignore="ContentDescription" />-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/tv_share_sports_result"-->
+<!--        android:text="@string/share"-->
+<!--        android:textSize="12sp"-->
+<!--        android:textColor="#86909C"-->
+<!--        app:layout_constraintBottom_toBottomOf="@id/tv_exit_sports_result"-->
+<!--        app:layout_constraintStart_toEndOf="@id/tv_save_sports_result"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"/>-->
+</android.support.constraint.ConstraintLayout>

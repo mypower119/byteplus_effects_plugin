@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/tv_title_algorithm_board"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_board_title"
+        android:background="@drawable/bg_board_head"/>
+
+    <View
+        android:background="@color/color_fill_3"
+        android:foreground="@color/divider_line"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_divider_line"/>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/color_fill_3">
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_algorithm_board"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/padding_top_rv"
+            android:layout_marginLeft="@dimen/rv_margin_horizontal"/>
+
+    </FrameLayout>
+
+
+
+    <include
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_board_bottom"
+        layout="@layout/view_board_bottom"/>
+</LinearLayout>

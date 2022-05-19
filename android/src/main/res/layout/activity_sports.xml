@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        android:id="@+id/tv_count_sports"
+        android:textSize="60sp"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:textColor="@color/colorWhite"
+        android:background="#1664FF"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/tv_time_sports"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_width="0dp"
+        android:layout_height="80dp"/>
+
+    <TextView
+        android:id="@+id/tv_time_sports"
+        android:textSize="40sp"
+        android:textColor="#4E5969"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:background="@color/colorWhite"
+        android:visibility="gone"
+        app:layout_constraintStart_toEndOf="@id/tv_count_sports"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_width="0dp"
+        android:layout_height="80dp"/>
+
+    <TextView
+        android:id="@+id/tv_title_sports"
+        android:text="@string/fit_outline"
+        android:textColor="@color/colorWhite"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:background="#FA9600"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"/>
+
+    <com.example.byteplus_effects_plugin.sports.widgets.SportMaskView
+        android:id="@+id/v_mask_sports"
+        android:visibility="gone"
+        app:sport.mask.svg="@raw/mask_open_close_jump"
+        app:sport.mask.strokeColor="#FA9600"
+        app:sport.mask.strokeWidth="3dp"
+        app:sport.mask.backgroundColor="#4A000000"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginTop="80dp"
+        android:paddingStart="42dp"
+        android:paddingEnd="42dp"
+        android:paddingTop="82dp"
+        android:paddingBottom="78dp"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"/>
+
+    <ImageView
+        android:id="@+id/iv_exit_sports"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginStart="20dp"
+        android:layout_marginBottom="16dp"
+        android:src="@drawable/ic_exit"
+        android:layout_width="58dp"
+        android:layout_height="34dp"
+        tools:ignore="ContentDescription" />
+
+    <ImageView
+        android:id="@+id/iv_switch_sports"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="16dp"
+        android:src="@drawable/ic_switch_camera"
+        android:layout_width="58dp"
+        android:layout_height="34dp"
+        tools:ignore="ContentDescription" />
+
+    <ImageView
+        android:id="@+id/iv_done_sports"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="16dp"
+        android:src="@drawable/ic_done"
+        android:layout_width="58dp"
+        android:layout_height="34dp"
+        android:visibility="gone"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        android:id="@+id/tv_count_down_sports"
+        android:background="#1664FF"
+        android:textSize="300sp"
+        android:textStyle="bold"
+        android:textColor="@color/colorWhite"
+        android:gravity="center"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <com.example.byteplus_effects_plugin.sports.widgets.BalanceView
+        android:id="@+id/bv_balance"
+        app:balance.balancedDrawable="@drawable/ic_balanced_drawable"
+        app:balance.unbalancedDrawable="@drawable/ic_unbalanced_drawable"
+        app:balance.okDrawable="@drawable/ic_ok_drawable"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginTop="80dp"
+        android:paddingStart="42dp"
+        android:paddingEnd="42dp"
+        android:paddingTop="82dp"
+        android:paddingBottom="78dp"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"/>
+</android.support.constraint.ConstraintLayout>

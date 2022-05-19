@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="bottom">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginRight="56dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginBottom="22dp"
+        android:orientation="horizontal">
+        <com.example.byteplus_effects_plugin.effect.view.RadioTextView
+            android:id="@+id/rt_filter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            app:selected="true"
+            app:color="#30D8DB"
+            app:text="@string/filter"
+            />
+        <com.example.byteplus_effects_plugin.effect.view.RadioTextView
+            android:id="@+id/rt_makeup"
+            android:layout_marginLeft="14dp"
+            android:layout_gravity="bottom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:selected="false"
+            app:color="#FBB02E"
+            app:text="@string/make_up"
+            />
+        <com.example.byteplus_effects_plugin.effect.view.ProgressBar
+            android:id="@+id/pb_makeup"
+            app:textHeight="20dp"
+            app:textSize="12dp"
+            app:circleRadius="10dp"
+            app:lineHeight="2dp"
+            app:activeLineColor="@color/colorWhite"
+            app:inactiveLineColor="@color/inactivie_progress_bg"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_marginLeft="12dp"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+
+    <include
+        layout="@layout/fragment_board"/>
+
+<!--    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="0dp"-->
+<!--        android:layout_weight="1"-->
+<!--        android:orientation="vertical">-->
+<!--        <TextView-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="@dimen/height_board_title"-->
+<!--            android:textSize="@dimen/text_board_title_size"-->
+<!--            android:gravity="center"-->
+<!--            android:textColor="@color/colorWhite"-->
+<!--            android:background="@drawable/bg_board_head"-->
+<!--            android:text="@string/tab_style_makeup"/>-->
+<!--        <View-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="@dimen/height_divider_line"-->
+<!--            android:background="@color/color_fill_3"-->
+<!--            android:foreground="@color/divider_line" />-->
+<!--        <FrameLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="0dp"-->
+<!--            android:layout_weight="1"-->
+<!--            android:background="@color/color_fill_3">-->
+<!--            <androidx.recyclerview.widget.RecyclerView-->
+<!--                android:id="@+id/rv_makeup"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginTop="@dimen/padding_top_rv"-->
+<!--                android:layout_marginLeft="@dimen/rv_margin_horizontal"/>-->
+<!--        </FrameLayout>-->
+
+
+
+<!--        <include-->
+<!--            layout="@layout/view_board_bottom"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="@dimen/height_board_bottom" />-->
+<!--    </LinearLayout>-->
+
+
+
+</LinearLayout>

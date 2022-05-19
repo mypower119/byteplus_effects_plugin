@@ -1,0 +1,50 @@
+[
+    {
+        "group":"group_hot",
+        "features":[
+            "feature_beauty",
+            "feature_hand"
+        ]
+    },
+    {
+        "group":"group_effect",
+        "features":[
+            "feature_beauty",
+            "feature_sticker",
+            "feature_matting_sticker",
+            "feature_qr_scan"
+        ]
+    },
+    {
+        "group":"group_algorithm",
+        "features":[
+            "feature_face",
+            "feature_hand",
+            "feature_skeleton",
+            "feature_pet_face",
+            "feature_head_seg",
+            "feature_portrait",
+            "feature_hair_parse",
+            "feature_sky_seg",
+            "feature_light",
+            "feature_human_distance",
+            "feature_concentrate",
+            "feature_gaze_estimation",
+            "feature_c1",
+            "feature_c2",
+            "feature_video_cls",
+            "feature_car",
+            "feature_face_verify",
+            "feature_face_cluster"
+        ]
+    },{
+    "group":"group_lens",
+    "features":[
+        "feature_video_sr",
+        "feature_night_scene",
+        "feature_adaptive_sharpen"
+
+
+    ]
+}
+]

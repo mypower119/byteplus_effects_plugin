@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:id="@+id/ll_carlight_cls"
+        android:layout_width="wrap_content"
+        android:minWidth="150dp"
+        android:layout_marginTop="80dp"
+        android:layout_height="wrap_content"
+        android:background="@color/color_fill_3"
+        android:orientation="vertical"
+        android:layout_gravity="right"
+        android:visibility="invisible">
+
+        <com.example.byteplus_effects_plugin.common.view.PropertyTextView
+            android:id="@+id/ptv_carlight_blur"
+            app:propertyTitle="@string/car_blur"
+            android:padding="5dp"
+            android:minWidth="150dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <com.example.byteplus_effects_plugin.common.view.PropertyTextView
+            android:id="@+id/ptv_carlight_grey"
+            app:propertyTitle="@string/car_light"
+            android:padding="5dp"
+            android:minWidth="150dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+</merge>

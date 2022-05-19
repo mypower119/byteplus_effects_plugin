@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <FrameLayout
+        android:id="@+id/fl_student_id_ocr"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorGrey"
+        android:visibility="gone">
+        <ImageView
+            android:id="@+id/iv_student_id_ocr"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/bg_item_unselect_selector"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"/>
+        <ImageView
+            android:id="@+id/iv_student_id_ocr_cancel"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="50dp"
+            android:layout_marginStart="30dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/bg_item_unselect_selector"
+            android:visibility="visible"/>
+        <TextView
+            android:id="@+id/ptv_student_id_ocr"
+            android:layout_marginLeft="20dp"
+            android:padding="5dp"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="100dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="visible"/>
+
+    </FrameLayout>
+</merge>

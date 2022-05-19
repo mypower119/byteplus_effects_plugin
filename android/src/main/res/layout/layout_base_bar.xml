@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/root_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <include layout="@layout/layout_permance"
+        android:layout_marginTop="86dp"
+        android:layout_marginLeft="16dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_marginBottom="@dimen/board_bottom_padding"
+        android:clickable="true"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/img_open"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_alignParentLeft="true"
+            android:layout_marginTop="8dp"
+            android:layout_marginLeft="48dp"
+            android:src="@drawable/ic_arrow_up" />
+
+        <ImageView
+            android:id="@+id/img_record"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_centerInParent="true"
+            android:src="@drawable/ic_record" />
+
+        <ImageView
+            android:id="@+id/img_default_activity"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="8dp"
+            android:layout_marginRight="48dp"
+            android:src="@drawable/ic_image_default" />
+
+    </RelativeLayout>
+    <ImageView
+        android:id="@+id/debug_window"
+        android:layout_width="100dp"
+        android:layout_height="200dp"
+        android:scaleType="fitCenter"
+        />
+
+    <include
+        layout="@layout/tool_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="33dp" />
+
+    <FrameLayout
+        android:id="@+id/fl_base_gl"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+</FrameLayout>

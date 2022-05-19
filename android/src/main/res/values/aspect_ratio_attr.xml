@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="AspectRatioLayout">
+        <attr name="aspect.ratio.length" format="enum">
+            <enum name="width" value="1"/>
+            <enum name="height" value="2"/>
+        </attr>
+        <attr name="aspect.ratio" format="float"/>
+        <attr name="aspect.ratio.corner.radius" format="dimension"/>
+    </declare-styleable>
+</resources>

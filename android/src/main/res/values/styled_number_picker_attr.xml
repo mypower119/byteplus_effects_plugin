@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="StyledNumberPicker">
+        <attr name="styled.number.picker.text.color" format="color"/>
+        <attr name="styled.number.picker.text.size" format="dimension"/>
+        <attr name="styled.number.picker.text.translateX" format="dimension"/>
+        <attr name="styled.number.picker.divider" format="reference|color"/>
+        <attr name="styled.number.picker.divider.height" format="dimension"/>
+    </declare-styleable>
+</resources>

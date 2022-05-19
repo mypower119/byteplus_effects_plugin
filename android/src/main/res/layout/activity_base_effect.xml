@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="bottom">
+
+    <FrameLayout
+        android:id="@+id/fl_effect_fragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <FrameLayout
+        android:id="@+id/fl_effect_board"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_board_total"
+        android:layout_gravity="bottom" />
+
+    <ImageView
+        android:id="@+id/img_compare"
+        android:src="@drawable/ic_normal"
+        android:layout_gravity="bottom|right"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="@dimen/img_compare_margin_bottom"
+        android:layout_width="28dp"
+        android:layout_height="28dp"/>
+
+</FrameLayout>

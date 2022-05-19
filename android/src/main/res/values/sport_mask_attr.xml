@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="SportMaskView">
+        <attr name="sport.mask.svg" format="reference"/>
+        <attr name="sport.mask.strokeColor" format="color"/>
+        <attr name="sport.mask.strokeWidth" format="dimension"/>
+        <attr name="sport.mask.backgroundColor" format="color"/>
+    </declare-styleable>
+</resources>

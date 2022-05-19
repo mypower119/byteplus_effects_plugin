@@ -1,0 +1,93 @@
+[
+    {
+        "group": "group_hot",
+        "features": [
+            "feature_sport_assistance",
+            "feature_beauty_standard",
+            "feature_style_makeup",
+            "feature_hand",
+            "feature_ar_hat"
+        ]
+    },
+    {
+        "group": "group_effect",
+        "features": [
+            "feature_beauty_lite",
+            "feature_beauty_standard",
+            "feature_sticker",
+            "feature_style_makeup",
+            "feature_animoji",
+            "feature_matting_sticker",
+            "feature_background_blur",
+            "feature_amazing_sticker",
+            "feature_qr_scan"
+        ]
+    },
+    {
+        "group":"group_algorithm",
+        "features":[
+            "feature_face",
+            "feature_hand",
+            "feature_skeleton",
+            "feature_pet_face",
+            "feature_head_seg",
+            "feature_portrait",
+            "feature_hair_parse",
+            "feature_sky_seg",
+            "feature_light",
+            "feature_human_distance",
+            "feature_concentrate",
+            "feature_gaze_estimation",
+            "feature_c1",
+            "feature_c2",
+            "feature_video_cls",
+            "feature_car",
+            "feature_face_verify",
+            "feature_face_cluster",
+            "feature_dynamic_gesture",
+            "feature_skin_segmentation",
+            "feature_bach_skeleton",
+            "feature_chroma_keying"
+        ]
+    },
+    {
+        "group": "group_ar",
+        "features": [
+            "feature_ar_slam",
+            "feature_ar_object",
+            "feature_ar_landmark",
+            "feature_sky_land"
+        ]
+    },
+    {
+        "group": "group_ar_try_on",
+        "features": [
+            "feature_ar_hair_dye",
+            "feature_ar_purse",
+            "feature_ar_nail",
+            "feature_ar_shoe",
+            "feature_ar_lipstick",
+            "feature_ar_hat",
+            "feature_ar_necklace",
+            "feature_ar_glasses",
+            "feature_ar_bracelet",
+            "feature_ar_ring",
+            "feature_ar_earrings",
+            "feature_ar_watch"
+        ]
+    },
+    {
+        "group": "group_lens",
+        "features": [
+            "feature_video_sr",
+            "feature_night_scene",
+            "feature_adaptive_sharpen"
+        ]
+    },
+    {
+        "group": "group_sports",
+        "features": [
+            "feature_sport_assistance"
+        ]
+    }
+]

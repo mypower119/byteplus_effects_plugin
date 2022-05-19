@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <FrameLayout
+        android:id="@+id/fl_image_quality"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_board_total"
+        android:layout_alignParentBottom="true" />
+    <ImageView
+        android:id="@+id/img_compare"
+        android:src="@drawable/ic_normal"
+        android:layout_alignParentRight="true"
+        android:layout_above="@id/fl_image_quality"
+        android:layout_marginRight="19dp"
+        android:layout_marginBottom="28dp"
+        android:layout_width="28dp"
+        android:layout_height="28dp"
+        android:visibility="invisible"/>
+</RelativeLayout>

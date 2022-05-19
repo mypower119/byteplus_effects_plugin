@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="SelectView">
+        <attr name="select_src" format="reference"/>
+        <attr name="select_title" format="string"/>
+        <attr name="select_desc" format="string"/>
+        <attr name="select_on" format="boolean"/>
+        <attr name="select_drawable_selected" format="reference"/>
+        <attr name="select_drawable_unselected" format="reference"/>
+    </declare-styleable>
+
+    <declare-styleable name="bubble">
+        <attr name="bubble_shadowColor" format="color" />
+        <attr name="bubble_padding" format="dimension" />
+        <attr name="bubble_strokeWidth" format="float" />
+        <attr name="bubble_cornerRadius" format="float" />
+        <attr name="bubble_halfBaseOfLeg" format="dimension" />
+    </declare-styleable>
+
+        <declare-styleable name="SwitchView">
+            <attr name="hasShadow" format="boolean"/>
+            <attr name="primaryColor" format="color"/>
+            <attr name="primaryColorDark" format="color"/>
+            <attr name="offColor" format="color"/>
+            <attr name="offColorDark" format="color"/>
+            <attr name="barColor" format="color"/>
+            <attr name="bgColor" format="color"/>
+            <attr name="shadowColor" format="color"/>
+            <attr name="ratioAspect" format="float"/>
+            <attr name="isOpened" format="boolean"/>
+        </declare-styleable>
+
+<!--    effect-->
+
+    <declare-styleable name="RadioTextView">
+        <attr name="selected" format="boolean"/>
+        <attr name="text" format="string"/>
+        <attr name="color" format="color"/>
+    </declare-styleable>
+
+    <declare-styleable name="ColorCircleView">
+        <!--圆半径-->
+        <attr name="circle_radius" format="dimension"/>
+        <!-- 内圆外环的间距-->
+        <attr name="ring_padding" format="dimension"/>
+        <!-- 圆环宽度-->
+        <attr name="ring_width" format="dimension"/>
+        <!-- 圆环颜色 -->
+        <attr name="ring_color" format="color"/>
+
+
+    </declare-styleable>
+
+    <declare-styleable name="DownloadView">
+        <attr name="bar_width" format="dimension"/>
+        <attr name="bar_width_padding" format="dimension"/>
+        <attr name="bar_height" format="dimension"/>
+        <attr name="bar_content_height" format="dimension"/>
+        <attr name="unreached_bar_color" format="color"/>
+        <attr name="reached_bar_color" format="color"/>
+    </declare-styleable>
+
+<!--    app-->
+    <declare-styleable name="ButtonView">
+        <attr name="src" format="reference"/>
+        <attr name="title" format="string"/>
+        <attr name="desc" format="string"/>
+        <attr name="on" format="boolean"/>
+    </declare-styleable>
+
+    <declare-styleable name="VideoButton">
+        <attr name="android:startColor" format="color"/>
+        <attr name="android:endColor" format="color"/>
+    </declare-styleable>
+
+    <declare-styleable name="ProgressBar">
+        <attr name="activeLineColor" format="color"/>
+        <attr name="inactiveLineColor" format="color"/>
+        <attr name="circleColor" format="color"/>
+        <attr name="textColor" format="color"/>
+        <attr name="lineHeight" format="dimension"/>
+        <attr name="circleRadius" format="dimension"/>
+        <attr name="delayShowText" format="integer"/>
+        <attr name="textPadding" format="dimension"/>
+        <attr name="animationTime" format="integer"/>
+        <attr name="textSize" format="dimension"/>
+        <attr name="textHeight" format="dimension"/>
+        <attr name="progress" format="float"/>
+    </declare-styleable>
+
+    <declare-styleable name="PropertyTextView">
+        <attr name="propertyTitle" format="string"/>
+        <attr name="propertyValue" format="string"/>
+    </declare-styleable>
+</resources>

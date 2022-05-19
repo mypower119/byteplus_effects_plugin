@@ -1,0 +1,71 @@
+%YAML 1.1
+--- !XShader &1
+name: filter_xshader
+guid: {a: 8739373760032222091, b: 1301803387528371125}
+renderQueue: 0
+passes:
+  - __class: Pass
+    name: ""
+    guid: {a: 14934367959023208031, b: 3103461186423548822}
+    shaders:
+      __class: Map
+      gles2:
+        - {localId: 2}
+        - {localId: 3}
+    semantics:
+      __class: Map
+      color:
+        __class: VertexAttribType
+        value: COLOR
+      position:
+        __class: VertexAttribType
+        value: POSITION
+      texcoord0:
+        __class: VertexAttribType
+        value: TEXCOORD0
+    clearColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+    clearDepth: 1
+    clearType:
+      __class: CameraClearType
+      value: DONT
+    renderState:
+      __class: RenderState
+      name: ""
+      guid: {a: 16379135448452692356, b: 4703789134022454156}
+      depthstencil:
+        __class: DepthStencilState
+        name: ""
+        guid: {a: 10179303351070366932, b: 224875776418554243}
+        depthTestEnable: false
+        depthTestEnableName: ""
+        depthCompareOp:
+          __class: CompareOp
+          value: LESS
+        depthCompareOpName: ""
+        depthWriteEnable: true
+        stencilTestEnable: false
+        stencilTestEnableName: ""
+    useFBOTexture: false
+    useCameraRT: false
+    useFBOFetch: false
+    isFullScreenShading: false
+    macrosMap:
+      __class: Map
+    preprocess: false
+    passType:
+      __class: PassType
+      value: NORMAL
+--- !Shader &2
+name: ""
+guid: {a: 11907937041135372757, b: 6786662394278814643}
+type:
+  __class: ShaderType
+  value: VERTEX
+sourcePath: xshader/gles2_filter.vert
+--- !Shader &3
+name: ""
+guid: {a: 2038386799479995757, b: 12143678433006742941}
+type:
+  __class: ShaderType
+  value: FRAGMENT
+sourcePath: xshader/gles2_filter.frag

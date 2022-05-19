@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.example.byteplus_effects_plugin.common.view.bubble.BubbleRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/brlBackground"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@android:color/transparent"
+    app:bubble_cornerRadius="10"
+    app:bubble_halfBaseOfLeg="18dp"
+    app:bubble_padding="18dp"
+    app:bubble_shadowColor="#64000000"
+    app:bubble_strokeWidth="5">
+
+</com.example.byteplus_effects_plugin.common.view.bubble.BubbleRelativeLayout>

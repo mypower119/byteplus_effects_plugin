@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+<!--    <dimen name="min_property_interval">20dp</dimen>-->
+    <dimen name="icon_size">32dp</dimen>
+    <dimen name="popwindow_margin">16dp</dimen>
+
+    <dimen name="bubble_tip_height">40dp</dimen>
+    <dimen name="slider_fragment_height">240dp</dimen>
+    <dimen name="outer_record_size">56dp</dimen>
+    <dimen name="inner_record_size">44dp</dimen>
+    <dimen name="sticker_size">46dp</dimen>
+    <dimen name="bottom_bar_height">76dp</dimen>
+
+    <dimen name="download_progress_bar_width">10dp</dimen>
+    <dimen name="download_progress_bar_height">2dp</dimen>
+    <dimen name="download_progress_bar_content_height">1.6dp</dimen>
+
+
+    <dimen name="height_progress_bar">82dp</dimen>
+    <dimen name="height_board_title">43.5dp</dimen>
+    <dimen name="height_divider_line">0.5dp</dimen>
+    <dimen name="height_board_content">120dp</dimen>
+    <dimen name="board_bottom_padding">20dp</dimen>
+    <dimen name="height_board_bottom">60dp</dimen>
+    <dimen name="height_board_total">224dp</dimen>
+    <dimen name="img_compare_margin_bottom">244dp</dimen>
+    <dimen name="colorlistview_margin_bottom">18dp</dimen>
+
+    <dimen name="button_size">36dp</dimen>
+    <dimen name="logo_size">60dp</dimen>
+    <dimen name="padding_top_rv">14dp</dimen>
+    <dimen name="rv_margin_horizontal">16dp</dimen>
+    <dimen name="item_distance">20dp</dimen>
+    <dimen name="item_text_padding_top">4dp</dimen>
+    <dimen name="item_select_text_padding_top">1dp</dimen>
+    <dimen name="text_board_title_size">13sp</dimen>
+    <dimen name="text_title_size">11dp</dimen>
+    <dimen name="select_padding">3dp</dimen>
+    <dimen name="select_line_width">1.4dp</dimen>
+    <dimen name="select_radius">5dp</dimen>
+
+    <dimen name="upload_select_distance">10dp</dimen>
+    <dimen name="upload_select_margin">8dp</dimen>
+
+<!--    algorithms-->
+<!--    <dimen name="hand_info_height">70dp</dimen>-->
+<!--    <dimen name="distance_info_height">30dp</dimen>-->
+<!--    <dimen name="pet_face_info_height">60dp</dimen>-->
+<!--    <dimen name="pet_face_info_width">140dp</dimen>-->
+<!--    <dimen name="general_object_info_height">30dp</dimen>-->
+<!--    <dimen name="car_orientation_info_height">30dp</dimen>-->
+
+<!--    effect-->
+<!--    <dimen name="radio_size">16sp</dimen>-->
+<!--    <dimen name="setting_height">300dp</dimen>-->
+<!--    <dimen name="toggle_height">25dp</dimen>-->
+<!--    <dimen name="toggle_width">45dp</dimen>-->
+
+<!--    <dimen name="radio_height">35dp</dimen>-->
+<!--    <dimen name="radio_margin">20dp</dimen>-->
+<!--    <dimen name="radio_padding">6dp</dimen>-->
+<!--    <dimen name="grid_bound_width">2dp</dimen>-->
+
+<!--    app-->
+    <dimen name="radio_size">16sp</dimen>
+    <dimen name="setting_height">300dp</dimen>
+    <dimen name="toggle_height">25dp</dimen>
+    <dimen name="toggle_width">45dp</dimen>
+
+    <dimen name="radio_height">35dp</dimen>
+    <dimen name="radio_margin">20dp</dimen>
+    <dimen name="radio_padding">6dp</dimen>
+    <dimen name="grid_bound_width">2dp</dimen>
+    <dimen name="hand_info_height">70dp</dimen>
+    <dimen name="distance_info_height">30dp</dimen>
+    <dimen name="pet_face_info_height">60dp</dimen>
+    <dimen name="pet_face_info_width">140dp</dimen>
+    <dimen name="general_object_info_height">30dp</dimen>
+    <dimen name="car_orientation_info_height">30dp</dimen>
+    <dimen name="min_property_interval">20dp</dimen>
+</resources>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="BalanceView">
+        <attr name="balance.barLength" format="dimension"/>
+        <attr name="balance.barWidth" format="dimension"/>
+        <attr name="balance.barStrokeWidth" format="dimension"/>
+
+        <attr name="balance.circleRadius" format="dimension"/>
+        <attr name="balance.dashCircleStrokeWidth" format="dimension"/>
+        <attr name="balance.strokeCircleStrokeWidth" format="dimension"/>
+
+        <attr name="balance.balancedColor" format="color"/>
+        <attr name="balance.unbalancedColor" format="color"/>
+
+        <attr name="balance.balanceDrawableRadius" format="dimension"/>
+        <attr name="balance.unbalancedDrawable" format="reference"/>
+        <attr name="balance.balancedDrawable" format="reference"/>
+        <attr name="balance.okDrawable" format="reference"/>
+
+        <attr name="balance.balanceWaitTime" format="float"/>
+        <attr name="balance.balanceThreshold" format="float"/>
+        <attr name="balance.balanceThresholdError" format="float"/>
+        <attr name="balance.balanceThresholdFrom" format="float"/>
+        <attr name="balance.balanceThresholdTo" format="float"/>
+
+        <attr name="balance.playFeedback" format="boolean"/>
+    </declare-styleable>
+</resources>

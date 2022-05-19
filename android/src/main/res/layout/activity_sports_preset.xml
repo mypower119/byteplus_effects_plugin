@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <android.widget.Toolbar
+        android:id="@+id/toolbar_sports_preset"
+        app:layout_constraintTop_toTopOf="parent"
+        app:contentInsetStart="0dp"
+        android:layout_width="match_parent"
+        android:layout_height="44dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/tv_title_sports_preset"
+                android:textColor="#1D2129"
+                android:textSize="18sp"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+
+            <ImageView
+                android:id="@+id/iv_back_sports_preset"
+                android:src="@drawable/ic_arrow_left_sport"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="4dp"
+                android:padding="12dp"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                tools:ignore="ContentDescription" />
+        </RelativeLayout>
+    </android.widget.Toolbar>
+
+    <FrameLayout
+        app:layout_constraintTop_toBottomOf="@id/toolbar_sports_preset"
+        app:layout_constraintBottom_toTopOf="@id/tv_time_sports_preset"
+        android:layout_marginBottom="16dp"
+        android:layout_marginTop="6dp"
+        android:layout_width="match_parent"
+        android:background="#000000"
+        android:layout_height="0dp">
+
+        <VideoView
+            android:layout_gravity="center"
+            android:id="@+id/v_player_sports_preset"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <ImageView
+            android:id="@+id/iv_player_sports_preset"
+            android:src="@drawable/ic_play_icon"
+            android:visibility="gone"
+            android:layout_gravity="center"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            tools:ignore="ContentDescription" />
+
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/tv_time_sports_preset"
+        android:text="02:00"
+        android:textStyle="bold"
+        android:textColor="#1D2129"
+        android:textSize="40sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/tv_time_text_sports_preset"
+        android:layout_marginBottom="6dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:ignore="HardcodedText" />
+
+    <TextView
+        android:id="@+id/tv_time_text_sports_preset"
+        android:text="@string/time_calculate"
+        android:textColor="#4E5969"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/v_time_minute_picker_sports_preset"
+        android:layout_marginBottom="12dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <com.example.byteplus_effects_plugin.sports.widgets.StyledNumberPicker
+        android:id="@+id/v_time_minute_picker_sports_preset"
+        app:styled.number.picker.divider="#E5E6EB"
+        app:styled.number.picker.divider.height="1px"
+        app:styled.number.picker.text.color="#1D2129"
+        app:styled.number.picker.text.size="16sp"
+        app:styled.number.picker.text.translateX="50dp"
+        app:layout_constraintBottom_toTopOf="@id/btn_start_sports_preset"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/v_time_second_picker_sports_preset"
+        android:layout_marginBottom="8dp"
+        android:layout_width="0dp"
+        android:layout_height="132dp"/>
+
+    <com.example.byteplus_effects_plugin.sports.widgets.StyledNumberPicker
+        android:id="@+id/v_time_second_picker_sports_preset"
+        app:styled.number.picker.divider="#E5E6EB"
+        app:styled.number.picker.divider.height="1px"
+        app:styled.number.picker.text.color="#1D2129"
+        app:styled.number.picker.text.size="16sp"
+        app:styled.number.picker.text.translateX="-50dp"
+        app:layout_constraintBottom_toTopOf="@id/btn_start_sports_preset"
+        app:layout_constraintStart_toEndOf="@id/v_time_minute_picker_sports_preset"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="8dp"
+        android:layout_width="0dp"
+        android:layout_height="132dp"/>
+
+    <Button
+        android:id="@+id/btn_start_sports_preset"
+        android:text="@string/start_sport"
+        android:textSize="16sp"
+        android:textColor="#ffffff"
+        android:textAllCaps="false"
+        android:background="@drawable/bg_start_sport"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="16dp"
+        android:layout_width="327dp"
+        android:layout_height="44dp"/>
+</android.support.constraint.ConstraintLayout>

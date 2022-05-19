@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+<!--    <color name="color_fill_3">#AA000000</color>-->
+    <color name="color_fill_3">#99000000</color>
+    <color name="black_trans_40">#66000000</color>
+    <color name="black_trans_15">#21FFFFFF</color>
+    <color name="dot_point_on">#30D8D8</color>
+    <color name="brand_color">#1664FF</color>
+    <color name="inactivie_progress_bg">#4DFFFFFF</color>
+    <color name="divider_line">#26FFFFFF</color>
+<!--    <color name="black_trans_15">#210dd090</color>-->
+    <color name="opacity_10_white">#1AFFFFFF</color>
+
+<!--    algorithms-->
+
+<!--    effect-->
+
+    <color name="divider_bg">#21FFFFFF</color>
+
+    <color name="unreached_bar_color">#7f808080</color>
+
+<!--    sports-->
+    <color name="error_5">#EB635E</color>
+    <color name="text_3">#4E5969</color>
+    <color name="brand1_6">#1664FF</color>
+
+<!--    app-->
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <color name="transparent">@android:color/transparent</color>
+    <color name="colorChecked">#33cccc</color>
+    <color name="colorUnChecked">#aaaaaa</color>
+    <color name="setting_color">#AAAAAA</color>
+    <color name="tipboard_bg">#80000000</color>
+    <color name="featureboard_bg">#ffffff</color>
+    <color name="selected_color">#1E90FF</color>
+    <color name="track_selected_color">#87CEFA</color>
+
+    <color name="focus_bg_colcor">#AAAAAA</color>
+
+    <color name="grid_focused">#3F78B5</color>
+    <color name="grid_selected">#303F9F</color>
+    <color name="viewfinder_laser">#ffcc0000</color> <!-- Android standard ICS color -->
+    <color name="viewfinder_mask">#60000000</color>
+    <color name="result_view">#b0000000</color>
+    <color name="possible_result_points">#c0ffbd21</color> <!-- Android standard ICS color -->
+
+    <color name="colorBg">#F4F5F7</color>
+    <color name="colorWhite">#FFFFFF</color>
+    <color name="colorGrey">#9C9C9C</color>
+    <color name="transparent_white">#66FFFFFF</color>
+    <color name="transparent_black">#AA000000</color>
+    <color name="transparent_white_hence">#AAFFFFFF</color>
+
+    <color name="color_text_2">#86909C</color>
+    <color name="color_text_4">#1D2129</color>
+    <color name="color_brand_6">#1664FF</color>
+    <color name="color_fill_2">#F2F3F8</color>
+
+</resources>

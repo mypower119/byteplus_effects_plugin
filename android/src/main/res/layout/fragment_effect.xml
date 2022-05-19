@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.example.byteplus_effects_plugin.effect.view.ColorListView
+        android:id="@+id/color_list_above"
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/colorlistview_margin_bottom"
+        android:visibility="gone"/>
+
+    <com.example.byteplus_effects_plugin.effect.view.ProgressBar
+        android:id="@+id/pb1"
+        android:layout_width="match_parent"
+        android:layout_height="82dp"
+        android:paddingLeft="16dp"
+        android:paddingRight="56dp"
+        android:paddingBottom="22dp"
+        app:activeLineColor="@color/colorWhite"
+        app:circleRadius="10dp"
+        app:inactiveLineColor="@color/inactivie_progress_bg"
+
+        app:lineHeight="2dp"
+        app:textHeight="20dp"
+        app:textSize="12dp" />
+
+    <include
+        layout="@layout/fragment_board"/>
+
+    <!--    <LinearLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="240dp"-->
+<!--        android:layout_gravity="bottom"-->
+<!--        android:orientation="vertical" >-->
+<!--        <include layout="@layout/fragment_identify"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="0dp"-->
+<!--            android:layout_weight="1"/>-->
+
+<!--        <include-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="@dimen/height_board_bottom"-->
+<!--            android:layout_gravity="bottom"-->
+<!--            layout="@layout/view_board_bottom"/>-->
+<!--    </LinearLayout>-->
+
+
+</LinearLayout>

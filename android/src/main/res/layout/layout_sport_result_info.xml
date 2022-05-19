@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        android:id="@+id/tv_count_sport_result_info"
+        android:textSize="24sp"
+        android:textColor="#1D2129"
+        android:textStyle="bold"
+        android:gravity="center"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/tv_time_sport_result_info"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/tv_count_suffix_sport_result_info"
+        app:layout_constraintVertical_chainStyle="packed"
+        android:layout_width="64dp"
+        android:layout_height="40dp"/>
+
+    <TextView
+        android:id="@+id/tv_count_suffix_sport_result_info"
+        android:text="@string/count_suffix"
+        android:textSize="12sp"
+        android:textColor="#86909C"
+        app:layout_constraintTop_toBottomOf="@id/tv_count_sport_result_info"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@id/tv_count_sport_result_info"
+        app:layout_constraintEnd_toEndOf="@id/tv_count_sport_result_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <View
+        android:id="@+id/v_interval_1"
+        app:layout_constraintStart_toEndOf="@id/tv_count_sport_result_info"
+        app:layout_constraintEnd_toStartOf="@id/tv_time_sport_result_info"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:background="#E5E8EF"
+        android:layout_width="1dp"
+        android:layout_height="32dp"/>
+
+    <TextView
+        android:id="@+id/tv_time_sport_result_info"
+        android:gravity="center"
+        android:textSize="24sp"
+        android:textColor="#1D2129"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@id/tv_count_sport_result_info"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/tv_time_suffix_sport_result_info"
+        app:layout_constraintVertical_chainStyle="packed"
+        android:layout_width="64dp"
+        android:layout_height="40dp"/>
+
+    <TextView
+        android:id="@+id/tv_time_suffix_sport_result_info"
+        android:text="@string/time_suffix"
+        android:textSize="12sp"
+        android:textColor="#86909C"
+        app:layout_constraintTop_toBottomOf="@id/tv_time_sport_result_info"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@id/tv_time_sport_result_info"
+        app:layout_constraintEnd_toEndOf="@id/tv_time_sport_result_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+<!--    <View-->
+<!--        android:id="@+id/v_interval_2"-->
+<!--        android:background="#E5E8EF"-->
+<!--        app:layout_constraintStart_toEndOf="@id/tv_time_sport_result_info"-->
+<!--        app:layout_constraintEnd_toStartOf="@id/tv_score_sport_result_info"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        android:layout_width="1dp"-->
+<!--        android:layout_height="32dp"/>-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/tv_score_sport_result_info"-->
+<!--        android:text="120"-->
+<!--        android:gravity="center"-->
+<!--        android:textSize="24sp"-->
+<!--        android:textColor="#1D2129"-->
+<!--        android:textStyle="bold"-->
+<!--        app:layout_constraintStart_toEndOf="@id/tv_time_sport_result_info"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        app:layout_constraintBottom_toTopOf="@id/tv_score_suffix_sport_result_info"-->
+<!--        app:layout_constraintVertical_chainStyle="packed"-->
+<!--        android:layout_width="64dp"-->
+<!--        android:layout_height="40dp"/>-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/tv_score_suffix_sport_result_info"-->
+<!--        android:text="分数"-->
+<!--        android:textSize="12sp"-->
+<!--        android:textColor="#86909C"-->
+<!--        app:layout_constraintTop_toBottomOf="@id/tv_score_sport_result_info"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="@id/tv_score_sport_result_info"-->
+<!--        app:layout_constraintEnd_toEndOf="@id/tv_score_sport_result_info"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"/>-->
+</android.support.constraint.ConstraintLayout>
