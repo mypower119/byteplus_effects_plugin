@@ -91,12 +91,14 @@ public class ByteplusEffectsPlugin implements FlutterPlugin, MethodCallHandler, 
   }
 
   public void checkResourceReady() {
-    int savedVersionCode = UserData.getInstance(flutterPluginBinding.getApplicationContext()).getVersion();
-    int currentVersionCode = getVersionCode();
-    if (savedVersionCode < currentVersionCode) {
-      UnzipTask task = new UnzipTask(this);
-      task.execute(UnzipTask.DIR);
-    }
+//    int savedVersionCode = UserData.getInstance(flutterPluginBinding.getApplicationContext()).getVersion();
+//    int currentVersionCode = getVersionCode();
+//    if (savedVersionCode < currentVersionCode) {
+//      UnzipTask task = new UnzipTask(this);
+//      task.execute(UnzipTask.DIR);
+//    }
+    UnzipTask task = new UnzipTask(this);
+    task.execute(UnzipTask.DIR);
   }
 
   public void checkLicenseReady() {
@@ -121,14 +123,19 @@ public class ByteplusEffectsPlugin implements FlutterPlugin, MethodCallHandler, 
     task.execute();
   }
 
-  private int getVersionCode() {
-    Context context = flutterPluginBinding.getApplicationContext();
-    try {
-      return context.getPackageManager().getPackageInfo(context.getPackageName(), 0).versionCode;
-    } catch (PackageManager.NameNotFoundException e) {
-      e.printStackTrace();
-      return -1;
-    }
+  public static int getVersionCode() {
+//    Context context = flutterPluginBinding.getApplicationContext();
+//    try {
+//      return context.getPackageManager().getPackageInfo(context.getPackageName(), 0).versionCode;
+//    } catch (PackageManager.NameNotFoundException e) {
+//      e.printStackTrace();
+//      return -1;
+//    }
+    return 4030100;
+  }
+
+  public static String getVersionName() {
+    return "4.3.1_standard";
   }
 
   public static Context context() {

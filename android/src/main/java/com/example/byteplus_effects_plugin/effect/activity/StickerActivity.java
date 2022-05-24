@@ -116,7 +116,7 @@ public class StickerActivity extends BaseEffectActivity implements TabStickerFra
         List<String> info = new ArrayList<String>(){
             {
                 // 加载本地测试贴纸的info设置示例
-                String stickerRootPath = "/storage/emulated/0/Android/data/com.bytedance.labcv.demo/files/assets/resource/StickerResource.bundle/stickers/local/";
+                String stickerRootPath = "/storage/emulated/0/Android/data/" + mContext.getPackageName() + "/files/assets/resource/StickerResource.bundle/stickers/local/";
                 File[] files = new File(stickerRootPath).listFiles(new FileFilter() {
                     @Override
                     public boolean accept(File pathname) {

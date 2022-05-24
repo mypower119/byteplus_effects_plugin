@@ -15,6 +15,7 @@ import androidx.annotation.RequiresApi;
 import androidx.localbroadcastmanager.content.LocalBroadcastManager;
 
 import com.bef.effectsdk.message.MessageCenter;
+import com.example.byteplus_effects_plugin.ByteplusEffectsPlugin;
 import com.example.byteplus_effects_plugin.core.Config;
 import com.example.byteplus_effects_plugin.core.license.EffectLicenseProvider;
 import com.example.byteplus_effects_plugin.core.util.LogUtils;
@@ -83,11 +84,12 @@ public class EffectManager {
 
    public int init(){
        String SDKVerison = null;
-       try {
-           SDKVerison = mContext.getPackageManager().getPackageInfo(mContext.getPackageName(), 0).versionName;
-       } catch (PackageManager.NameNotFoundException e){
-           e.printStackTrace();
-       }
+       SDKVerison = ByteplusEffectsPlugin.getVersionName();
+//       try {
+//           SDKVerison = mContext.getPackageManager().getPackageInfo(mContext.getPackageName(), 0).versionName;
+//       } catch (PackageManager.NameNotFoundException e){
+//           e.printStackTrace();
+//       }
         LogUtils.e("Effect SDK version =" + SDKVerison);
         if (!mLicenseProvider.checkLicenseResult("getLicensePath"))
             return mLicenseProvider.getLastErrorCode();

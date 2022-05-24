@@ -15,6 +15,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import com.example.byteplus_effects_plugin.ByteplusEffectsPlugin;
 import com.example.byteplus_effects_plugin.common.base.BaseGLActivity;
 import com.example.byteplus_effects_plugin.common.imgsrc.camera.CameraSourceImpl;
 import com.example.byteplus_effects_plugin.common.model.ProcessInput;
@@ -282,11 +283,12 @@ public class QRScanActivity extends BaseGLActivity implements DownloadResourceTa
 
     @Override
     public String getAppVersionName() {
-        try {
-            return getPackageManager().getPackageInfo(getPackageName(), 0).versionName;
-        } catch (PackageManager.NameNotFoundException e) {
-            return null;
-        }
+//        try {
+//            return getPackageManager().getPackageInfo(getPackageName(), 0).versionName;
+//        } catch (PackageManager.NameNotFoundException e) {
+//            return null;
+//        }
+        return ByteplusEffectsPlugin.getVersionName();
     }
 
     private void showProgress() {

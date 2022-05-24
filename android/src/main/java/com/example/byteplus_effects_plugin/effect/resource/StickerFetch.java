@@ -3,6 +3,7 @@ package com.example.byteplus_effects_plugin.effect.resource;
 import android.content.Context;
 import android.content.pm.PackageManager;
 
+import com.example.byteplus_effects_plugin.ByteplusEffectsPlugin;
 import com.example.byteplus_effects_plugin.common.utils.FileUtils;
 import com.example.byteplus_effects_plugin.common.utils.LocaleUtils;
 import com.example.byteplus_effects_plugin.core.util.LogUtils;
@@ -42,7 +43,8 @@ public class StickerFetch implements BaseResource.ResourceListener {
         mContext = context;
         String systemVersion = "Android";
         String systemLanguage = LocaleUtils.getLanguage(context);
-        String appVersion = context.getPackageManager().getPackageInfo(context.getPackageName(), 0).versionName;;
+//        String appVersion = context.getPackageManager().getPackageInfo(context.getPackageName(), 0).versionName;
+        String appVersion = ByteplusEffectsPlugin.getVersionName();
 
         RemoteResource resource = new RemoteResource();
         resource.setName(String.format("%s_%s_%s_%s", systemVersion, systemLanguage, appVersion, type));

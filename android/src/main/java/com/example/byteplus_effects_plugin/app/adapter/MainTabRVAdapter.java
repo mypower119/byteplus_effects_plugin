@@ -99,13 +99,14 @@ public class MainTabRVAdapter extends RecyclerView.Adapter<RecyclerView.ViewHold
     }
 
     private String getVersionName() {
-        Context context = ByteplusEffectsPlugin.context();
-        try {
-            return "V" + context.getPackageManager().getPackageInfo(context.getPackageName(), 0).versionName;
-        } catch (PackageManager.NameNotFoundException e) {
-            e.printStackTrace();
-            return "";
-        }
+//        Context context = ByteplusEffectsPlugin.context();
+//        try {
+//            return "V" + context.getPackageManager().getPackageInfo(context.getPackageName(), 0).versionName;
+//        } catch (PackageManager.NameNotFoundException e) {
+//            e.printStackTrace();
+//            return "";
+//        }
+        return ByteplusEffectsPlugin.getVersionName();
     }
 
     @Override

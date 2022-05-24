@@ -68,14 +68,14 @@ public class EffectLicenseHelper implements EffectLicenseProvider {
         int retCode = licenseWrapper.getLicenseWithParams(new HashMap<String, String>(), false, new LicenseCallback() {
             @Override
             public void execute(String retmsg, int retSize, int errorCode, String errorMsg) {
-                _errorCode = errorCode;
-                _errorMsg = errorMsg;
+//                _errorCode = errorCode;
+//                _errorMsg = errorMsg;
             }
         });
-        if (retCode != 0) {
-            _errorCode = retCode;
-            _errorMsg = "{zh} jni注册失败，检查是否注入网络请求 {en} Jni registration failed, check whether the network request is injected";
-        }
+//        if (retCode != 0) {
+//            _errorCode = retCode;
+//            _errorMsg = "{zh} jni注册失败，检查是否注入网络请求 {en} Jni registration failed, check whether the network request is injected";
+//        }
 
         if (!checkLicenseResult("getLicensePath"))
             return "";
@@ -112,10 +112,10 @@ public class EffectLicenseHelper implements EffectLicenseProvider {
             }
         });
 
-        if (retCode != 0) {
-            _errorCode = retCode;
-            _errorMsg = "{zh} jni注册失败，检查是否注入网络请求 {en} Jni registration failed, check whether the network request is injected";
-        }
+//        if (retCode != 0) {
+//            _errorCode = retCode;
+//            _errorMsg = "{zh} jni注册失败，检查是否注入网络请求 {en} Jni registration failed, check whether the network request is injected";
+//        }
 
         if (!checkLicenseResult("updateLicensePath"))
             return "";
@@ -130,22 +130,22 @@ public class EffectLicenseHelper implements EffectLicenseProvider {
 
     @Override
     public int getLastErrorCode() {
-        return _errorCode;
+        return 0;
     }
 
     public boolean checkLicenseResult(String msg) {
-        if (_errorCode != 0) {
-            String log = msg + " error: " + _errorCode;
-            LogUtils.e(log);
-            String toast = _errorMsg;
-            if (toast == "") {
-                toast = log;
-            }
-            Intent intent = new Intent(Config.CHECK_RESULT_BROADCAST_ACTION);
-            intent.putExtra("msg", toast);
-            LocalBroadcastManager.getInstance(mContext).sendBroadcast(intent);
-            return false;
-        }
+//        if (_errorCode != 0) {
+//            String log = msg + " error: " + _errorCode;
+//            LogUtils.e(log);
+//            String toast = _errorMsg;
+//            if (toast == "") {
+//                toast = log;
+//            }
+//            Intent intent = new Intent(Config.CHECK_RESULT_BROADCAST_ACTION);
+//            intent.putExtra("msg", toast);
+//            LocalBroadcastManager.getInstance(mContext).sendBroadcast(intent);
+//            return false;
+//        }
         return true;
     }
 

@@ -18,6 +18,8 @@ import android.os.Bundle;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.coordinatorlayout.widget.CoordinatorLayout;
+
+import com.example.byteplus_effects_plugin.ByteplusEffectsPlugin;
 import com.google.android.material.tabs.TabLayout;
 import androidx.fragment.app.FragmentActivity;
 import androidx.localbroadcastmanager.content.LocalBroadcastManager;
@@ -365,13 +367,14 @@ public class MainActivity extends FragmentActivity
     }
 
     private int getVersionCode() {
-        Context context = getApplicationContext();
-        try {
-            return context.getPackageManager().getPackageInfo(context.getPackageName(), 0).versionCode;
-        } catch (PackageManager.NameNotFoundException e) {
-            e.printStackTrace();
-            return -1;
-        }
+//        Context context = getApplicationContext();
+//        try {
+//            return context.getPackageManager().getPackageInfo(context.getPackageName(), 0).versionCode;
+//        } catch (PackageManager.NameNotFoundException e) {
+//            e.printStackTrace();
+//            return -1;
+//        }
+        return ByteplusEffectsPlugin.getVersionCode();
     }
 
     @Override
