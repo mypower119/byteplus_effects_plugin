@@ -90,7 +90,8 @@ ext {
 dependencies {
 //    implementation project(':BytedEffects')
     // app
-    implementation fileTree(dir: "libs", include: ["*.jar", "*.aar"])
+//    implementation fileTree(dir: "libs", include: ["*.jar", "*.aar"])
+    implementation(name:'effectAAR-release', ext:'aar')
     if (project.property("compile_ck").equals("true")){
         implementation project(':ck-entrance')
     }
