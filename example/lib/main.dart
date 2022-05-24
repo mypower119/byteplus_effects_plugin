@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
 import 'dart:async';
 
@@ -17,6 +19,7 @@ class MyApp extends StatefulWidget {
 
 class _MyAppState extends State<MyApp> {
   String _platformVersion = 'Unknown';
+  String? _imagePath;
 
   @override
   void initState() {
@@ -53,14 +56,28 @@ class _MyAppState extends State<MyApp> {
         appBar: AppBar(
           title: const Text('Plugin example app'),
         ),
-        body: Center(
-          child: Text('Running on: $_platformVersion\n'),
+        body: SingleChildScrollView(
+          child: Column(
+            children: [
+              Text('Running on: $_platformVersion\n\n'),
+              Text('_imagePath: $_imagePath\n'),
+              if(_imagePath != null && _imagePath != '')...[
+                Image.file(File(_imagePath!))
+              ]
+            ],
+          ),
         ),
         floatingActionButton: IconButton(
           icon: Icon(Icons.add),
           onPressed: () async {
-            var res = await ByteplusEffectsPlugin.instance.pickImage();
-            int a = 0;
+            // var res = await ByteplusEffectsPlugin.instance.pickImage(EffectsFeatureType.FEATURE_AR_HAT);
+            var res = await ByteplusEffectsPlugin.instance.pickImage(EffectsFeatureType.FEATURE_ANIMOJI);
+            // var res = await ByteplusEffectsPlugin.instance.pickImage(EffectsFeatureType.FEATURE_ANIMOJI);
+            if(res != null) {
+              setState(() {
+                _imagePath = res;
+              });
+            }
           },
         ),
       ),
