@@ -563,14 +563,11 @@ public class StickerActivity extends BaseEffectActivity implements TabStickerFra
 
                             @Override
                             public void onSavePicFinished(boolean success, String path) {
-                                Intent returnIntent = new Intent();
                                 if (success) {
-                                    setResult(Activity.RESULT_OK, returnIntent);
-                                    returnIntent.putExtra("image_path", path);
+                                    setResult(Activity.RESULT_OK, getIntent().putExtra("image_path", path));
 
                                     ToastUtils.show(getString(R.string.capture_ok));
                                 } else {
-                                    setResult(Activity.RESULT_CANCELED);
 
                                     ToastUtils.show(getString(R.string.capture_fail));
                                 }

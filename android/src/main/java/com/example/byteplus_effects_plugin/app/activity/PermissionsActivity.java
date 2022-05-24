@@ -11,6 +11,8 @@ import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Toast;
 
+import com.example.byteplus_effects_plugin.ByteplusEffectsPlugin;
+
 
 public class PermissionsActivity extends Activity {
     public static final String PERMISSION_SUC_ACTIVITY = "permission_suc_activity";
@@ -59,7 +61,8 @@ public class PermissionsActivity extends Activity {
         Class<?> sucActivity = (Class<?>) getIntent().getSerializableExtra(PERMISSION_SUC_ACTIVITY);
         Intent intent = new Intent(this, sucActivity);
         intent.putExtras(getIntent());
-        startActivity(intent);
+//        startActivity(intent);
+        ByteplusEffectsPlugin.activityBinding.getActivity().startActivityForResult(intent, 99);
         finish();
         overridePendingTransition(0, 0);
     }

@@ -63,7 +63,7 @@ public class ByteplusEffectsPlugin implements FlutterPlugin, MethodCallHandler, 
   /// This local reference serves to register the plugin with the Flutter Engine and unregister it
   /// when the Flutter Engine is detached from the Activity
   private MethodChannel channel;
-  private ActivityPluginBinding activityBinding;
+  public static ActivityPluginBinding activityBinding;
   private FlutterPlugin.FlutterPluginBinding flutterPluginBinding;
   private static WeakReference<Context> context;
   private Point mDefaultPreviewSize = new Point(1280,720);
@@ -216,7 +216,7 @@ public class ByteplusEffectsPlugin implements FlutterPlugin, MethodCallHandler, 
       return;
     }
 
-    Intent intent = new Intent(flutterPluginBinding.getApplicationContext(), clz);
+    Intent intent = new Intent(activityBinding.getActivity(), clz);
     // in sake of speed
     if (config.getAlgorithmConfig() != null){
       intent.putExtra(AlgorithmConfig.ALGORITHM_CONFIG_KEY, new Gson().toJson(config.getAlgorithmConfig()));
@@ -252,9 +252,9 @@ public class ByteplusEffectsPlugin implements FlutterPlugin, MethodCallHandler, 
               activityBinding.getActivity().checkSelfPermission(PERMISSION_AUDIO) != PackageManager.PERMISSION_GRANTED) {
         // start Permissions activity
         ComponentName componentName = intent.getComponent();
-        intent.setClass(flutterPluginBinding.getApplicationContext(), PermissionsActivity.class);
+        intent.setClass(activityBinding.getActivity(), PermissionsActivity.class);
         intent.putExtra(PermissionsActivity.PERMISSION_SUC_ACTIVITY, Class.forName(componentName.getClassName()));
-        activityBinding.getActivity().startActivityForResult(intent, 99);
+        activityBinding.getActivity().startActivity(intent);
         return;
       }
     }
@@ -290,13 +290,11 @@ public class ByteplusEffectsPlugin implements FlutterPlugin, MethodCallHandler, 
 
   @Override
   public boolean onActivityResult(int requestCode, int resultCode, Intent data) {
-    if(resultCode == Activity.RESULT_OK) {
-      if (requestCode == 99) {
-        channel.invokeMethod("CameraBack", data.getExtras().get("image_path").toString());
-        return true;
-      }
+    if (requestCode == 99 && data != null && data.getExtras().containsKey("image_path")) {
+      channel.invokeMethod("CameraBack", data.getExtras().get("image_path") != null ? data.getExtras().get("image_path").toString() : null);
+    } else {
+      channel.invokeMethod("CameraBack", null);
     }
-    channel.invokeMethod("CameraBack", null);
     return false;
   }
 
