@@ -1,5 +1,6 @@
 package com.example.byteplus_effects_plugin.effect.activity;
 
+import android.app.Activity;
 import android.content.ContentResolver;
 import android.content.Intent;
 import android.content.pm.PackageManager;
@@ -115,7 +116,7 @@ public class StickerActivity extends BaseEffectActivity implements TabStickerFra
         List<String> info = new ArrayList<String>(){
             {
                 // 加载本地测试贴纸的info设置示例
-                String stickerRootPath = "/storage/emulated/0/Android/data/com.example.byteplus_effects_plugin.app/files/assets/resource/StickerResource.bundle/stickers/local/";
+                String stickerRootPath = "/storage/emulated/0/Android/data/com.bytedance.labcv.demo/files/assets/resource/StickerResource.bundle/stickers/local/";
                 File[] files = new File(stickerRootPath).listFiles(new FileFilter() {
                     @Override
                     public boolean accept(File pathname) {
@@ -562,11 +563,18 @@ public class StickerActivity extends BaseEffectActivity implements TabStickerFra
 
                             @Override
                             public void onSavePicFinished(boolean success, String path) {
+                                Intent returnIntent = new Intent();
                                 if (success) {
-                                    ToastUtils.show(getString(com.example.byteplus_effects_plugin.R.string.capture_ok));
+                                    setResult(Activity.RESULT_OK, returnIntent);
+                                    returnIntent.putExtra("image_path", path);
+
+                                    ToastUtils.show(getString(R.string.capture_ok));
                                 } else {
-                                    ToastUtils.show(getString(com.example.byteplus_effects_plugin.R.string.capture_fail));
+                                    setResult(Activity.RESULT_CANCELED);
+
+                                    ToastUtils.show(getString(R.string.capture_fail));
                                 }
+                                finish();
 
 
                             }

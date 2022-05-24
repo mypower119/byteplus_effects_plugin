@@ -159,7 +159,7 @@ public class MainDataManager {
 
     private static List<FeatureTab> sFeatureTabs;
 
-    private static HashMap<String, FeatureTabItem> featureItemMap = new HashMap<>();
+    public static HashMap<String, FeatureTabItem> featureItemMap = new HashMap<>();
     static {
 
         featureItemMap.put(FEATURE_BEAUTY_LITE, new FeatureTabItem(

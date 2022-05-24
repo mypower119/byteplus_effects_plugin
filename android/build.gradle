@@ -2,13 +2,17 @@ group 'com.example.byteplus_effects_plugin'
 version '1.0'
 
 buildscript {
+    apply from: "./versions.gradle"
     repositories {
         google()
         mavenCentral()
+        jcenter()
+//        maven { url "http://maven.byted.org/repository/android_public/" }
+        maven { url "https://jitpack.io" }
     }
 
     dependencies {
-        classpath 'com.android.tools.build:gradle:4.1.0'
+        classpath 'com.android.tools.build:gradle:3.5.3'
     }
 }
 
@@ -16,6 +20,12 @@ rootProject.allprojects {
     repositories {
         google()
         mavenCentral()
+        jcenter()
+        flatDir {
+            dirs 'libs'
+        }
+//        maven { url "http://maven.byted.org/repository/android_public/" }
+        maven { url "https://jitpack.io" }
     }
 }
 
@@ -30,6 +40,94 @@ android {
     }
 
     defaultConfig {
-        minSdkVersion 16
+        minSdkVersion 21
     }
+
+    lintOptions {
+        checkReleaseBuilds false
+        abortOnError false
+    }
+
+    packagingOptions {
+        pickFirst 'lib/arm64-v8a/libc++_shared.so'
+        pickFirst 'lib/armeabi-v7a/libc++_shared.so'
+    }
+
+    splits {
+
+        // Configures multiple APKs based on ABI.
+        abi {
+
+            // Enables building multiple APKs per ABI.
+            enable true
+
+            // By default all ABIs are included, so use reset() and include to specify that we only
+            // want APKs for x86 and x86_64.
+
+            // Resets the list of ABIs that Gradle should create APKs for to none.
+            reset()
+
+            // Specifies a list of ABIs that Gradle should create APKs for.
+            include 'armeabi-v7a', 'arm64-v8a'
+
+            // Specifies that we do not want to also generate a universal APK that includes all ABIs.
+            universalApk false
+        }
+    }
+}
+
+configurations {
+    compile.exclude group: 'com.bytedance.ugc.framework.libs', module: 'vesdk'
+}
+
+ext {
+    TARGET_ARCH_ABI = findProperty("TARGET_ARCH_ABI") ?: "arm64-v8a"
+    // {zh} TOB 定制开始 {en} TOB customization begins
+    EXTRA_ARCH_ABI = findProperty("EXTRA_ARCH_ABI") ?: "armeabi-v7a"
+    // {zh} TOB 定制结束 {en} End of TOB customization
+}
+
+dependencies {
+//    implementation project(':BytedEffects')
+    // app
+    implementation fileTree(dir: "libs", include: ["*.jar", "*.aar"])
+    if (project.property("compile_ck").equals("true")){
+        implementation project(':ck-entrance')
+    }
+    implementation rootProject.ext.dependencies["gson"]
+    implementation rootProject.ext.dependencies["bugly"]
+    implementation rootProject.ext.support["recyclerview-v7"]
+
+    // common
+//    api project(':core')
+
+    api rootProject.ext.support["design"]
+    api rootProject.ext.support["support-v4"]
+    api rootProject.ext.support["appcompat-v7"]
+    api rootProject.ext.support["recyclerview-v7"]
+    api rootProject.ext.support["support-fragment"]
+    api rootProject.ext.support["constraint-layout"]
+
+    api rootProject.ext.dependencies["gson"]
+    api rootProject.ext.dependencies["glide"]
+    api rootProject.ext.dependencies["mediapicker"]
+    api rootProject.ext.dependencies["photoView"]
+    api rootProject.ext.dependencies["easy-permission"]
+    api rootProject.ext.dependencies["smoothprogressbar"]
+    api rootProject.ext.dependencies["okhttp"]
+
+    api rootProject.ext.support["localbroadcastmanager"]
+
+    // resources
+    api rootProject.ext.dependencies["gson"]
+    api rootProject.ext.dependencies["okhttp"]
+    implementation 'org.jetbrains:annotations:15.0'
+
+    // effect
+    api rootProject.ext.dependencies["zxing"]
+    api rootProject.ext.dependencies["okhttp"]
+    api rootProject.ext.support["recyclerview-v7"]
+    implementation rootProject.ext.support["viewpager"]
+
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.3'
 }

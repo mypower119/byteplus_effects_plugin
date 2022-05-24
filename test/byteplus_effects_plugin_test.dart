@@ -18,6 +18,6 @@ void main() {
   });
 
   test('getPlatformVersion', () async {
-    expect(await ByteplusEffectsPlugin.platformVersion, '42');
+    expect(await ByteplusEffectsPlugin.instance.platformVersion, '42');
   });
 }

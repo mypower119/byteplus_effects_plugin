@@ -58,7 +58,8 @@ public class SavePicTask extends AsyncTask<CaptureResult, Void, String> {
         try {
             ContentValues values = new ContentValues();
             values.put(MediaStore.Images.Media.DATA, path);
-            values.put(MediaStore.Images.Media.MIME_TYPE, "image/*");
+//            values.put(MediaStore.Images.Media.MIME_TYPE, "image/*");
+            values.put(MediaStore.Images.Media.MIME_TYPE, "image/png");
             mDelegate.getContentResolver().insert(MediaStore.Images.Media.EXTERNAL_CONTENT_URI, values);
         } catch (Exception e) {
             e.printStackTrace();

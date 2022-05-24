@@ -1,5 +1,6 @@
 package com.example.byteplus_effects_plugin.common.base;
 
+import android.app.Activity;
 import android.content.ContentResolver;
 import android.content.Intent;
 import android.os.Bundle;
@@ -307,13 +308,18 @@ public abstract class BaseBarGLActivity extends BaseGLActivity {
 
                                     @Override
                                     public void onSavePicFinished(boolean success, String path) {
+                                        Intent returnIntent = new Intent();
                                         if (success) {
+                                            setResult(Activity.RESULT_OK, returnIntent);
+                                            returnIntent.putExtra("image_path", path);
+
                                             ToastUtils.show(getString(R.string.capture_ok));
                                         } else {
+                                            setResult(Activity.RESULT_CANCELED);
+
                                             ToastUtils.show(getString(R.string.capture_fail));
                                         }
-
-
+                                        finish();
                                     }
                                 });
                                 task.execute(captureResult);

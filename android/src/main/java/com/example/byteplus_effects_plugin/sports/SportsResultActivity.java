@@ -1,5 +1,6 @@
 package com.example.byteplus_effects_plugin.sports;
 
+import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Bitmap;
@@ -96,10 +97,17 @@ public class SportsResultActivity extends AppCompatActivity implements View.OnCl
 
     @Override
     public void onSavePicFinished(boolean success, String path) {
+        Intent returnIntent = new Intent();
         if (success) {
-            ToastUtils.show(getString(com.example.byteplus_effects_plugin.R.string.capture_ok));
+            setResult(Activity.RESULT_OK, returnIntent);
+            returnIntent.putExtra("image_path", path);
+
+            ToastUtils.show(getString(R.string.capture_ok));
         } else {
-            ToastUtils.show(getString(com.example.byteplus_effects_plugin.R.string.capture_fail));
+            setResult(Activity.RESULT_CANCELED);
+
+            ToastUtils.show(getString(R.string.capture_fail));
         }
+        finish();
     }
 }
