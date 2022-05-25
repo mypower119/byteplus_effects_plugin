@@ -28,21 +28,18 @@ public class UnzipTask extends AsyncTask<String, Void, Boolean> {
 
     @Override
     protected Boolean doInBackground(String... strings) {
-        IUnzipViewCallback callback = mCallback.get();
-        if (callback == null) return false;
-        String path = strings[0];
-        File dstFile = callback.getContext().getExternalFilesDir("assets");
-        FileUtils.clearDir(new File(dstFile, path));
-
         try {
+            IUnzipViewCallback callback = mCallback.get();
+            if (callback == null) return false;
+            String path = strings[0];
+            File dstFile = callback.getContext().getExternalFilesDir("assets");
+            FileUtils.clearDir(new File(dstFile, path));
             FileUtils.copyAssets(callback.getContext().getAssets(), path, dstFile.getAbsolutePath());
             return true;
         } catch (Exception e) {
             e.printStackTrace();
             return false;
         }
-
-//        return FileUtils.unzipAssetFile(mCallback.get().getContext(), zipPath, dstFile);
     }
 
     @Override

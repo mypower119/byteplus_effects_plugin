@@ -91,12 +91,6 @@ public class ByteplusEffectsPlugin implements FlutterPlugin, MethodCallHandler, 
   }
 
   public void checkResourceReady() {
-//    int savedVersionCode = UserData.getInstance(flutterPluginBinding.getApplicationContext()).getVersion();
-//    int currentVersionCode = getVersionCode();
-//    if (savedVersionCode < currentVersionCode) {
-//      UnzipTask task = new UnzipTask(this);
-//      task.execute(UnzipTask.DIR);
-//    }
     UnzipTask task = new UnzipTask(this);
     task.execute(UnzipTask.DIR);
   }
@@ -124,13 +118,6 @@ public class ByteplusEffectsPlugin implements FlutterPlugin, MethodCallHandler, 
   }
 
   public static int getVersionCode() {
-//    Context context = flutterPluginBinding.getApplicationContext();
-//    try {
-//      return context.getPackageManager().getPackageInfo(context.getPackageName(), 0).versionCode;
-//    } catch (PackageManager.NameNotFoundException e) {
-//      e.printStackTrace();
-//      return -1;
-//    }
     return 4030100;
   }
 
@@ -159,7 +146,6 @@ public class ByteplusEffectsPlugin implements FlutterPlugin, MethodCallHandler, 
     HashMap<String, Object> params = (HashMap<String, Object>) call.arguments;
     String featureType = (String) params.get("feature_type");
 
-//    FeatureTabItem itemConfig = MainDataManager.featureItemMap.get(MainDataManager.FEATURE_AR_GLASSES);
     FeatureTabItem itemConfig = MainDataManager.featureItemMap.get(featureType);
     onItemClick(itemConfig);
 
